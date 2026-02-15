@@ -1,0 +1,36 @@
+# RTS simulation config – defaults matching docs/project_info_1404_PQ_3.pdf
+
+system:
+  m_min: 2
+  m_max: 64
+  U_norm_min: 0.1
+  U_norm_max: 1.0
+
+gen:
+  n_tasks: 10
+  nodes_per_task_min: 20
+  nodes_per_task_max: 50
+  erdos_renyi_p: 0.1
+  period_values: [2000, 4000, 6000]
+  hi_fraction: 0.5
+
+resources:
+  n_resources_min: 2
+  n_resources_max: 8
+  total_access_options: [10, 30, 50, 80, 150]
+  csp_min: 0.1
+  csp_max: 1.0
+
+partition:
+  use_federated: true
+  use_grouping_by_resource: true
+
+sched:
+  use_ca_edf: true
+  fifo_lock_hi_lo: true
+  deadlock_drop_low: true
+
+seed: 0
+output_dir: output
+results_dir: results
+plots_dir: plots
